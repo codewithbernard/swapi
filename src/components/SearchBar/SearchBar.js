@@ -12,6 +12,9 @@ class SearchBar extends Component {
   handleInputChange = event => {
     const changedSearchTerm = event.target.value;
     this.setState({ wikiSearchInput: changedSearchTerm });
+    if (!changedSearchTerm) {
+      this.props.fetchData(changedSearchTerm);
+    }
   };
 
   handleSubmit = event => {
