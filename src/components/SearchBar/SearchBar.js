@@ -22,6 +22,10 @@ class SearchBar extends Component {
     this.props.fetchData(this.state.wikiSearchInput);
   };
 
+  componentDidMount() {
+    this.props.fetchData(this.state.wikiSearchInput);
+  }
+
   render() {
     return (
       <div className="row search-bar">
