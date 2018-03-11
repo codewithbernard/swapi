@@ -1,19 +1,25 @@
-import { FETCH_PEOPLE } from './types';
-import axios from 'axios';
+import { FETCH_DATA, TOGGLE_FILTER } from "./types";
+import { API_PEOPLE, API_PLANETS, API_STARSHIPS } from "../api/endpoints";
+import axios from "axios";
 
-const API_URL = "https://swapi.co/api";
+export const fetchData = searchTerm => async dispatch => {
+  const people = await axios.get(`${API_PEOPLE}?search=${searchTerm}`);
+  const starships = await axios.get(`${API_STARSHIPS}?search=${searchTerm}`);
+  const planets = await axios.get(`${API_PLANETS}?search=${searchTerm}`);
 
-export const fetchPeople = searchTerm => async dispatch => {
-  if (searchTerm) {
-    const result = await axios.get(`${API_URL}/people/?search=${searchTerm}`);
-    dispatch({
-      type: FETCH_PEOPLE,
-      payload: result.data.results
-    });
-  } else {
-    dispatch({
-      type: FETCH_PEOPLE,
-      payload: {}
-    });
-  }
-}
+  dispatch({
+    type: FETCH_DATA,
+    payload: {
+      people: people.data.results,
+      starships: starships.data.results,
+      planets: planets.data.results
+    }
+  });
+};
+
+export const toggleFilter = filter => async dispatch => {
+  dispatch({
+    type: TOGGLE_FILTER,
+    payload: filter
+  });
+};

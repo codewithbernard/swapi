@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Header from './Header';
-import SearchBar from './SearchBar/SearchBar';
-import ItemList from './ItemList';
+import Header from "./Header";
+import SearchBar from "./SearchBar/SearchBar";
+import ItemList from "./ItemList";
+import Filter from "./Filter";
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
       <div className="container">
         <Header />
         <SearchBar />
+        <Filter />
         <ItemList />
       </div>
     );

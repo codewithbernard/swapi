@@ -1,1 +1,2 @@
-export const FETCH_PEOPLE = "FETCH_PEOPLE";
+export const FETCH_DATA = "FETCH_DATA";
+export const TOGGLE_FILTER = "TOGGLE_FILTER";
