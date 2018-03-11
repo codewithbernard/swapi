@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import _ from "lodash";
 import Item from "./Item/Item";
 
+// List of data. Just renders all items. Also checking if the filter is active
 class ItemList extends Component {
   // Renders message to the user that no data was found
   renderEmptySearch = () => {
@@ -23,6 +24,7 @@ class ItemList extends Component {
   renderCollection = name => {
     const filter = this.props.filter[name];
     const searchResults = this.props.search[name];
+    // Check if filter is active
     if (filter) {
       return _.map(searchResults, item => {
         return (

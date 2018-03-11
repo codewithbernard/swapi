@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { PEOPLE, PLANETS, STARSHIPS } from "../api/filters";
 import { toggleFilter } from "../actions";
 
+// Represents filter. If the filter is active change state in redux store
 class Filter extends Component {
   render() {
     const { people, planets, starships } = this.props.filter;

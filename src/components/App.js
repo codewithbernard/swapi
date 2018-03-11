@@ -5,6 +5,7 @@ import SearchBar from "./SearchBar/SearchBar";
 import ItemList from "./ItemList";
 import Filter from "./Filter";
 
+// Glue all components together
 class App extends Component {
   render() {
     return (

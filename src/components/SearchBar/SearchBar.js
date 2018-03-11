@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchData } from "../../actions";
 
+// Search form. After submitting new actions is called
 class SearchBar extends Component {
   state = {
     wikiSearchInput: ""
