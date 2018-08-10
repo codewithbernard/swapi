@@ -36,4 +36,4 @@ In this directory are all UI components that are used. `ItemList` is responsible
 
 ## Design
 
-Design created using [materialize](www.materializecss.com)
+Design created using [materialize](http://www.materializecss.com)
