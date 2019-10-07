@@ -2,6 +2,9 @@
   "name": "start-wars-wiki",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "8.11.4"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "lodash": "^4.17.5",
